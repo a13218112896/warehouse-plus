@@ -1,5 +1,5 @@
 <template>
-    <div class="common-layout">
+    <div>
         <el-container>
             <el-header>
                 <userMessage></userMessage>
@@ -29,17 +29,14 @@
 
 <script setup>
 import router from '../../router/index.js'
-import { ref } from 'vue'
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
+import { Search } from '@element-plus/icons-vue'
 import UserMessage from '../../components/home/UserMessage.vue'
 const ToWarehousing = () =>{
     router.push('/warehousing')
 }
 const ToScreen = () =>{
     router.push('/screen')
-}
-const logOut = () =>{
-    router.push('/login')
 }
 const search = ref('')
 const form = reactive(
@@ -94,7 +91,7 @@ const onSubmit = () => {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .el-header{
     height:60px;
     padding: 15px 50px 0;
@@ -103,60 +100,46 @@ const onSubmit = () => {
     background-color: #e7f2ff;  
     position: fixed;
     width: 100%;
-}
-.el-dropdown-link{
-    display: flex;
-}
-.user-name{
-    text-align: center;
-    line-height: 30px;
-    margin-left: 10px;
-    font-size: 16px;
-    cursor: default;
-}
-.btns-box{
-    display: flex;
-}
-/* 筛选按钮 */
-.header-btn{
-    display: block;
-    width: 60px;
-    text-align: center;
-    color: #409eff;
-    height: 30px;
-    line-height: 30px;
-    margin-right: 20px;
-    cursor: pointer;
+    .btns-box{
+        display: flex;
+    }
+    /* 筛选按钮 */
+    .header-btn{
+        display: block;
+        width: 60px;
+        text-align: center;
+        color: #409eff;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
 }
 .el-main{
     margin-top:300px;
     display: flex;
     justify-content: center;
-}
-/* 搜索框 */
-.input{
-    width: 500px;
-    font-size: 16px;
-    height: 45px;
-}
-
-/* 搜索 */
-.search-btn{
-    height: 45px;
-    width: 110px;
-    font-size: 17px;
-    border-radius: 0px 5px 5px 0px ;
-    position: relative;
-    top: 0px;
-    left: -10px;
-}
-
-
-
-.demo-form-inline{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    .demo-form-inline{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* 搜索框 */
+        .input{
+            width: 500px;
+            font-size: 16px;
+            height: 45px;
+        }
+        /* 搜索 */
+        .search-btn{
+            height: 45px;
+            width: 110px;
+            font-size: 17px;
+            border-radius: 0px 5px 5px 0px ;
+            position: relative;
+            top: 0px;
+            left: -10px;
+        }
+    }
 }
 .el-footer{
     display: flex;
