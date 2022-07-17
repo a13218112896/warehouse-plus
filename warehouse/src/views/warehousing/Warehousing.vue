@@ -69,36 +69,43 @@ const warehousingForm = reactive(
                                     identifier: '001',
                                     stuffId: '111',
                                     stuffNum: '100',
+                                    name: 'STM32'
                                 },
                                 {
                                     identifier: '002',
                                     stuffId: '222',
                                     stuffNum: '50',
+                                    name: 'STM32'
                                 },
                                 {
                                     identifier: '003',
                                     stuffId: '333',
                                     stuffNum: '157',
+                                    name: 'STM32'
                                 },
                                 {
                                     identifier: '004',
                                     stuffId: '111',
                                     stuffNum: '1345',
+                                    name: 'STM32'
                                 },
                                 {
                                     identifier: '005',
                                     stuffId: '111',
                                     stuffNum: '100',
+                                    name: 'STM32'
                                 },
                                 {
                                     identifier: '006',
                                     stuffId: '111',
                                     stuffNum: '100',
+                                    name: 'STM32'
                                 },
                                 {
                                     identifier: '007',
                                     stuffId: '111',
                                     stuffNum: '100',
+                                    name: 'STM32'
                                 },
                                 {
                                     identifier: '008',
