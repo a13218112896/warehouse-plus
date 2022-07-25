@@ -3,7 +3,7 @@
 		<canvas id="canvas"></canvas>
 		<Signin v-if="signinShow" @getMsg="signinMsg"></Signin>
 		<Signup v-if="signupShow" @getMsg="signupMsg"></Signup>
-		<Signuping v-if="signupingShow" @getMsg="signupingMsg"></Signuping>
+		<Signto v-if="SigntoShow" @getMsg="SigntoMsg"></Signto>
 	</div>
 </template>
 
@@ -13,7 +13,7 @@ import { reactive, ref, onMounted } from 'vue';
 // 引入登录组件
 import Signin from './modules/Signin.vue'
 import Signup from './modules/Signup.vue'
-import Signuping from './modules/Signuping.vue'
+import Signto from './modules/Signto.vue'
 	// 登录页背景绘制
 	const canvasBg = () => {
 		var bodywidth = document.body.clientWidth;
@@ -38,14 +38,14 @@ import Signuping from './modules/Signuping.vue'
 	// 控制登录注册组件显示
 	let signinShow = ref(true)
 	let signupShow = ref(false)
-	let signupingShow = ref(false)
+	let SigntoShow = ref(false)
 	//接收登录子组件的信息
 	const signinMsg = (msg) => {
 		console.log(msg);
 		if(msg=='goSignup'){
 			signinShow.value = false
 			signupShow.value = true
-			signupingShow.value = false
+			SigntoShow.value = false
 		}
 	}
 	const signupMsg = (msg) => {
@@ -53,19 +53,19 @@ import Signuping from './modules/Signuping.vue'
 		if(msg=='goSignin'){
 			signinShow.value = true
 			signupShow.value = false
-			signupingShow.value = false
-		}else if(msg=='goSignuping'){
+			SigntoShow.value = false
+		}else if(msg=='goSignto'){
 			signinShow.value = false
 			signupShow.value = false
-			signupingShow.value = true
+			SigntoShow.value = true
 		}
 	}
-	const signupingMsg = (msg) => {
+	const SigntoMsg = (msg) => {
 		console.log(msg);
 		if(msg=='goSignup'){
 			signinShow.value = true
 			signupShow.value = false
-			signupingShow.value = false
+			SigntoShow.value = false
 		}
 	}
 </script>

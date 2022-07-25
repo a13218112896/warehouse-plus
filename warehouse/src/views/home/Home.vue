@@ -94,7 +94,7 @@ const onSubmit = () => {
 <style scoped lang="less">
 .el-header{
     height:60px;
-    padding: 15px 50px 0;
+    padding: 15px 60px 0;
     display: flex;
     justify-content: space-between;
     background-color: #e7f2ff;  
@@ -116,7 +116,7 @@ const onSubmit = () => {
     }
 }
 .el-main{
-    margin-top:300px;
+    margin-top:20%;
     display: flex;
     justify-content: center;
     .demo-form-inline{

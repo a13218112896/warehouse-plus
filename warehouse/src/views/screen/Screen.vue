@@ -22,6 +22,7 @@
             </el-main>
             </el-affix>
             <el-footer>
+                <screenMsg :warehousingForm="screenForm"></screenMsg>
             </el-footer>
         </el-container>
     </div>
@@ -32,6 +33,7 @@ import router from '../../router/index.js'
 import { ref, reactive } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import UserMessage from '../../components/home/UserMessage.vue'
+import ScreenMsg from '../../components/screen/ScreenMsg.vue'
 
 
 const ToWarehousing = () =>{
@@ -40,12 +42,565 @@ const ToWarehousing = () =>{
 const ToBack = () =>{
     router.push('/home')
 }
+const screenForm = reactive(
+    [
+        // 仓库
+        {   
+            id: 1,
+            name:'北校区仓库',
+            province:'江苏省',
+            city:'苏州市',
+            district:'姑苏区',
+            address:'北校区',
+            reservoir:[
+                // 库区
+                {
+                    warehouseId:11,
+                    name:'教学楼一楼库区',
+                    address: '教学楼一楼',
+                    // 货架
+                    shelves:[
+                        {
+                            name:'一号货架',
+                            specifications: '20*5',
+                            // 存储盒
+                            shelvesBox:[
+                                {
+                                    identifier: '002',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '002',
+                                    stuffId: '222',
+                                    stuffNum: '50',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '003',
+                                    stuffId: '333',
+                                    stuffNum: '157',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '004',
+                                    stuffId: '111',
+                                    stuffNum: '1345',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '005',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '006',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '007',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '008',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '009',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '010',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '011',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '012',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '013',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '014',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '015',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '016',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '017',
+                                    stuffId: '222',
+                                    stuffNum: '50',
+                                },
+                                {
+                                    identifier: '018',
+                                    stuffId: '333',
+                                    stuffNum: '157',
+                                },
+                                {
+                                    identifier: '019',
+                                    stuffId: '111',
+                                    stuffNum: '1345',
+                                },
+                                {
+                                    identifier: '020',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '21',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '22',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '23',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '24',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '25',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '002',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '002',
+                                    stuffId: '222',
+                                    stuffNum: '50',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '003',
+                                    stuffId: '333',
+                                    stuffNum: '157',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '004',
+                                    stuffId: '111',
+                                    stuffNum: '1345',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '005',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '006',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '007',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                    name: 'STM32'
+                                },
+                                {
+                                    identifier: '008',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '009',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '010',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '011',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '012',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '013',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '014',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '015',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '016',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '017',
+                                    stuffId: '222',
+                                    stuffNum: '50',
+                                },
+                                {
+                                    identifier: '018',
+                                    stuffId: '333',
+                                    stuffNum: '157',
+                                },
+                                {
+                                    identifier: '019',
+                                    stuffId: '111',
+                                    stuffNum: '1345',
+                                },
+                                {
+                                    identifier: '020',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '21',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '22',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '23',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '24',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '25',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '26',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '027',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '028',
+                                    stuffId: '111',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '029',
+                                    stuffId: '222',
+                                    stuffNum: '100',
+                                },
+                                {
+                                    identifier: '030',
+                                    stuffId: '333',
+                                    stuffNum: '100',
+                                },
+                            ]
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            id: 2,
+            name:'南校区仓库',
+            province:'江苏省',
+            city:'苏州市',
+            district:'姑苏区',
+            address:'南校区',
+        },
+    ]
+)
 </script>
  
 <style scoped lang='less'>
  .el-header{
     height:60px;
-    padding: 15px 50px 0;
+    padding: 15px 60px 0;
     display: flex;
     justify-content: space-between;
     background-color: #e7f2ff;  
@@ -91,5 +646,8 @@ const ToBack = () =>{
             left: -10px;
         }
     }
+}
+.el-footer{
+    padding: 0px 60px;
 }
 </style>

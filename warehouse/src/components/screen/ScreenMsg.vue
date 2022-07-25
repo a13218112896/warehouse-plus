@@ -6,8 +6,14 @@
                     <el-collapse-item v-for="reservoir in warehouse.reservoir" :key="reservoir.index" :title="reservoir.name" :name="reservoir.index">
                         <!-- {{reservoir.shelves}} -->
                         <div style="padding: 0 2% 0 2%">
+
                             <el-collapse-item v-for="shelves in reservoir.shelves" :key="shelves.index" :title="shelves.name" :name="shelves.index">
                                 <div class="shelves-Box">
+                                    <div>
+                                        <span v-for="(y,index) in Number(shelves.specifications.split('*')[0])" :key="y.index">
+                                            {{index+1}}
+                                        </span>
+                                    </div>
                                     <div class="shelves-X-Box" v-for="x in Number(shelves.specifications.split('*')[1])" :key="x.index">
                                         <div 
                                         @click="dialogMsg(shelves.shelvesBox[(x-1)*Number(shelves.specifications.split('*')[0])+y-1])" 
@@ -18,7 +24,7 @@
                                             placement="bottom" effect="light">
                                                 <div>
                                                     <span>
-                                                    {{shelves.shelvesBox[(x-1)*Number(shelves.specifications.split('*')[0])+y-1].identifier}}
+                                                        {{shelves.shelvesBox[(x-1)*Number(shelves.specifications.split('*')[0])+y-1].identifier}}
                                                     </span>
                                                 </div>
                                             </el-tooltip>
@@ -45,7 +51,7 @@
                 <template #footer>
                 <span class="dialog-footer">
                     <el-button @click="dialogShow = false">关闭</el-button>
-                    <el-button type="primary" @click="warehousing">入库</el-button>
+                    <el-button type="primary" @click="warehousing">出库</el-button>
                 </span>
                 </template>
             </el-dialog>
@@ -83,7 +89,7 @@ const dialogMsg = (data) => {
     margin-top: 20px;
     margin-bottom: 20px;
     .shelves-X-Box{
-            padding: 0 5%;
+        padding: 0 5%;
         display: flex;
         .shelves-Y-Box{
             flex: 1;
@@ -95,7 +101,7 @@ const dialogMsg = (data) => {
                 padding-top: 10%;
                 padding-bottom: 25%;
                 min-width: 70px;
-                min-height: 30px;
+                min-height: 35px;
                 box-sizing: border-box;
                 width: 100%;
                 span{
